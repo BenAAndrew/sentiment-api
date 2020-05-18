@@ -28,6 +28,6 @@ Returns a JSON
     }
 }
 ```
-Returns a dictionary of `words` containing each word with a sentiment greater than the `sentiment_threshold`. This word contains its number of occurances in your text and it's sentiment score.
+Returns a dictionary of `words` containing each word with a sentiment greater than the `sentiment_threshold`. Each word dictionary contains its number of occurances in your text and it's sentiment score.
 
 A positive value means the word has positive meaning and visa versa. A greater value means the word has greater sentiment.
