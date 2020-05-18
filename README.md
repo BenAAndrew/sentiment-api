@@ -20,12 +20,12 @@ Returns a JSON
 
 ```
 {
-  "words": {
-    "cool": {
-      "occurances": 1,
-      "score": 0.3182
-    }...
-  }
+    "words": {
+        "cool": {
+            "occurances": 1,
+            "score": 0.3182
+        }...
+    }
 }
 ```
 Returns a dictionary of `words` containing each word with a sentiment greater than the `sentiment_threshold`. This word contains its number of occurances in your text and it's sentiment score.
