@@ -1,9 +1,10 @@
 from collections import Counter
+from os import getcwd
 import re
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
-nltk.download("vader_lexicon")
+nltk.data.path.append(getcwd())
 sid = SentimentIntensityAnalyzer()
 
 
