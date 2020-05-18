@@ -18,7 +18,7 @@ def getSentiment(text, sentiment_threshold):
     occurances = dict(Counter(words))
     sentiment = {}
 
-    for word in words:
+    for word in set(words):
         score = sid.polarity_scores(word)["compound"]
         if abs(score) >= sentiment_threshold:
             sentiment[word] = {"occurances": occurances[word], "score": score}
