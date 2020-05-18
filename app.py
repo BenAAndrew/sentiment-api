@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from sentiment import getSentiment
 
 app = Flask(__name__)
@@ -18,6 +18,10 @@ def index():
     sentiment_threshold = float(data.get("sentiment_threshold", DEFAULT_SENTIMENT_THRESHOLD))
     return jsonify({"words": getSentiment(text, sentiment_threshold)})
 
+
+@app.route("/", methods=["GET"])
+def help():
+    return render_template("help.html")
 
 if __name__ == "__main__":
     app.run(debug=False)
